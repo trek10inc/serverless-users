@@ -1,0 +1,6 @@
+{
+  "project": "serverless-users",
+  "projectBucket": "serverless.us-east-1.trek10-serverless-users",
+  "domain": "trek10-serverless-users",
+  "notificationEmail": "jhaubold@trek10.com"
+}
