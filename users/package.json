@@ -12,6 +12,10 @@
   "keywords": [],
   "devDependencies": {},
   "dependencies": {
-    "serverless-helpers-js": "~0.1.0"
+    "admittance": "^5.0.1",
+    "bluebird": "^3.3.0",
+    "joi": "^7.3.0",
+    "serverless-helpers-js": "~0.1.0",
+    "vogels": "^2.2.0"
   }
 }

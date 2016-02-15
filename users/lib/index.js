@@ -2,11 +2,6 @@
  * Lib
  */
 
-module.exports.respond = function(event, cb) {
+var Users = require('./users.vogels')
+var roleDefinitions = require('./roles')
 
-  var response = {
-    message: "Your Serverless function ran successfully!"
-  };
-
-  return cb(null, response);
-};
