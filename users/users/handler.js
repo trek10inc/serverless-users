@@ -21,25 +21,28 @@ module.exports.handler = function(event, context) {
     case 'GET':
       if (event.params.id)
         return Users.getAsync({id: event.params.id}).then(function (result) {
-          // result.attrs.permissions = result.getPermissions()
+
+          result.setPermissionAttributes()
           return context.succeed({ "user": result })
         }).catch(context.fail)
         // get one item
       else
         return Users.scan().execAsync().then(function (result) { 
           result.Items.map(function (item) {
-            // item.attrs.permissions = item.getPermissions()
+            item.setPermissionAttributes()
           })
           return context.succeed({ "users": result.Items })
         }).catch(context.fail)
         // get all of them
       break
     case 'POST':
+      Users.removePermissionsFromOrgs(event.body)
       return Users.createAsync(event.body).then(function (result) {
         return context.succeed({ "user": result })
       }).catch(context.fail)
       break
     case 'PUT':
+      Users.removePermissionsFromOrgs(event.body)
       event.body.id = event.params.id
       return Users.createAsync(event.body).then(function (result) {
         return context.succeed({ "user": result })
