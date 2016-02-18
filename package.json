@@ -9,5 +9,14 @@
     "type": "git",
     "url": "git://github.com/"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "glob": "latest",
+    "gulp": "latest",
+    "gulp-awslambda": "latest",
+    "gulp-istanbul": "latest",
+    "gulp-eslint": "latest",
+    "gulp-mocha": "latest",
+    "gutil": "latest"
+  }
 }
