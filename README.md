@@ -1,1 +1,3 @@
+# UNMAINTAINED. USE COGNITO USER POOLS.
+
 #serverless-users
